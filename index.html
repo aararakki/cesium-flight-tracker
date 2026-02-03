@@ -56,6 +56,15 @@
 
       positionProperty.addSample(time, pos);
 
+const point = viewer.entities.add({
+  position: Cesium.Cartesian3.fromDegrees(139.75, 35.68),
+  point: { pixelSize: 10 }
+});
+
+setTimeout(() => {
+  point.show = false;
+}, 5000);
+      
       // 公式と同様：全ポイントを赤点で可視化
       viewer.entities.add({
         description: `Location: (${p.longitude}, ${p.latitude}, ${p.height})`,
