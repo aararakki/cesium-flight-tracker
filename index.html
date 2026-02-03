@@ -65,7 +65,13 @@ setTimeout(() => {
   point.show = false;
 }, 5000);
       
-
+      // 公式と同様：全ポイントを赤点で可視化
+      viewer.entities.add({
+        description: `Location: (${p.longitude}, ${p.latitude}, ${p.height})`,
+        position: pos,
+        point: { pixelSize: 10, color: Cesium.Color.RED }
+      });
+    }
 
     // ===== Step 6/7: 飛行機モデル（Cesium ion Asset） =====
     // ここをあなたの Asset ID に置き換え
